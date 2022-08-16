@@ -1,0 +1,44 @@
+[awesome]
+src.git = "https://github.com/awesomeWM/awesome"
+fetch.github = "awesomeWM/awesome"
+
+[picom]
+src.git = "https://github.com/yaocccc/picom"
+src.branch = "feat-animation-extra"
+fetch.github = "yaocccc/picom"
+
+[zscroll]
+src.git = "https://github.com/noctuid/zscroll"
+fetch.github = "noctuid/zscroll"
+
+[spicetify-cli]
+src.github = "khanhas/spicetify-cli"
+fetch.github = "khanhas/spicetify-cli"
+
+[spicetify-themes]
+src.git = "https://github.com/morpheusthewhite/spicetify-themes"
+fetch.github = "morpheusthewhite/spicetify-themes"
+
+[catppuccin-spicetify]
+src.git = "https://github.com/catppuccin/spicetify"
+fetch.github = "catppuccin/spicetify"
+
+[aerial-sddm-theme]
+src.git = "https://github.com/replaycoding/aerial-sddm-theme"
+fetch.github = "replaycoding/aerial-sddm-theme"
+
+[copilot-vim]
+src.git = "https://github.com/github/copilot.vim"
+fetch.github = "github/copilot.vim"
+
+[nvim-cokeline]
+src.git = "https://github.com/noib3/nvim-cokeline"
+fetch.github = "noib3/nvim-cokeline"
+
+[coc-tailwindcss3]
+src.git = "https://github.com/yaegassy/coc-tailwindcss3"
+fetch.github = "yaegassy/coc-tailwindcss3"
+
+[nwg-panel]
+src.github = "nwg-piotr/nwg-panel"
+fetch.github = "nwg-piotr/nwg-panel"

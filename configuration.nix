@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports =
@@ -10,22 +10,114 @@
       ./hardware-configuration.nix
     ];
 
-  # Use the GRUB 2 boot loader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
-  # boot.loader.grub.efiSupport = true;
-  # boot.loader.grub.efiInstallAsRemovable = true;
-  # boot.loader.efi.efiSysMountPoint = "/boot/efi";
-  # Define on which hard drive you want to install Grub.
-  # boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelPackages = pkgs.linuxPackages_zen;
+    extraModprobeConfig = "options hid_apple fnmode=1";
+  };
 
   # networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking = {
+    hostName = "nixos";
+    useDHCP = false;
+    networkmanager = {
+      enable = true;
+      wifi.macAddress = "random";
+    };
+    nameservers = [
+      "172.16.1.254"
+    ];
+  };
+
+
+  environment.systemPackages = [];
+  services = {
+    gnome = {
+      glib-networking.enable = true;
+      gnome-keyring.enable = true;
+    };
+    flatpak.enable = true;
+    xserver = {
+      enable = true;
+
+      displayManager = {
+        lightdm = {
+          enable = true;
+          greeter = {
+            enable = true;
+            package = pkgs.web-greeter;
+            name = "web-greeter";
+          };
+        };
+        defaultSession = "hyprland";
+      };
+
+      windowManager.awesome.enable = true;
+
+      videoDrivers = ["nvidia"];
+    };
+
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
+  };
+
+  programs.hyprland = {
+    enable = true;
+    package = pkgs.hyprland-nvidia;
+  };
+
+  environment.loginShellInit = ''
+    dbus-update-activation-environment --systemd DISPLAY
+    eval $(ssh-agent)
+    eval $(gnome-keyring-daemon --start)
+    export GPG_TTY=$TTY
+    export WLR_DRM_DEVICES=/dev/dri/card1:/dev/dri/card0
+    export CLUTTER_BACKEND=wayland
+    export XDG_SESSION_TYPE=wayland
+    export QT_QPA_PLATFORM=wayland
+    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export MOZ_ENABLE_WAYLAND=1
+    export GBM_BACKEND=nvidia-drm
+    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+    export WLR_NO_HARDWARE_CURSORS=1
+    export WLR_BACKEND=vulkan
+  '';
+
+  security.pam.services.sddm.enableGnomeKeyring = true;
+  powerManagement.cpuFreqGovernor = "performance";
+
+  i18n.extraLocaleSettings = {
+    LC_TIME = "en_US.UTF-8";
+  };
+
+  hardware = {
+    nvidia = {
+      package = pkgs.linuxKernel.packages.linux_zen.nvidia_x11;
+      open = true;
+      modesetting.enable = true;
+    };
+    opengl = {
+      enable = true;
+      driSupport32Bit = true;
+    };
+    i2c.enable = true;
+  };
+
+  nix.settings.trusted-users = ["root" "carsen"];
+
+  xdg.portal.enable = true;
+
 
   # Set your time zone.
-  # time.timeZone = "Europe/Amsterdam";
+  time.timeZone = "America/Regina";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -56,21 +148,20 @@
   # services.printing.enable = true;
 
   # Enable sound.
-  # sound.enable = true;
-  # hardware.pulseaudio.enable = true;
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users.jane = {
-  #   isNormalUser = true;
-  #   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  #   packages = with pkgs; [
-  #     firefox
-  #     thunderbird
-  #   ];
-  # };
+  users.users.carsen = {
+    isNormalUser = false;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    packages = with pkgs; [
+      brave
+    ];
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

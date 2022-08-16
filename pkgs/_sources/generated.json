@@ -1,0 +1,211 @@
+{
+    "aerial-sddm-theme": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "aerial-sddm-theme",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "replaycoding",
+            "repo": "aerial-sddm-theme",
+            "rev": "5b451282b73deb6840181cfc47ac137e25eff4f7",
+            "sha256": "sha256-ATIrLF81Bw5YkRDaPnjt57jLiqwrm3AoFR7FcMwkR6U=",
+            "type": "github"
+        },
+        "version": "5b451282b73deb6840181cfc47ac137e25eff4f7"
+    },
+    "awesome": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "awesome",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "awesomeWM",
+            "repo": "awesome",
+            "rev": "b7bac1dc761f7e231355e76351500a97b27b6803",
+            "sha256": "sha256-SxydaQScu0kvBn3VOnT29/Sji0Y+7my+tO46mpMggAQ=",
+            "type": "github"
+        },
+        "version": "b7bac1dc761f7e231355e76351500a97b27b6803"
+    },
+    "catppuccin-spicetify": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "catppuccin-spicetify",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "catppuccin",
+            "repo": "spicetify",
+            "rev": "9b2170628eeab74b4582be4df646f4739f5e5b0a",
+            "sha256": "sha256-9glV3NvpVmVkGLD6BZufg++Ucx6XA7zNk/+5Ytn9K1g=",
+            "type": "github"
+        },
+        "version": "9b2170628eeab74b4582be4df646f4739f5e5b0a"
+    },
+    "coc-tailwindcss3": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "coc-tailwindcss3",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yaegassy",
+            "repo": "coc-tailwindcss3",
+            "rev": "263eeeaa14e7efe7056fdca92e0c60801425b912",
+            "sha256": "sha256-71x7h91ruLgckVIJFWCGp7LellIS25nHfGd7uzDYEyk=",
+            "type": "github"
+        },
+        "version": "263eeeaa14e7efe7056fdca92e0c60801425b912"
+    },
+    "copilot-vim": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "copilot-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "github",
+            "repo": "copilot.vim",
+            "rev": "c2e75a3a7519c126c6fdb35984976df9ae13f564",
+            "sha256": "sha256-V13La54aIb3hQNDE7BmOIIZWy7In5cG6kE0fti/wxVQ=",
+            "type": "github"
+        },
+        "version": "c2e75a3a7519c126c6fdb35984976df9ae13f564"
+    },
+    "nvim-cokeline": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "nvim-cokeline",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "noib3",
+            "repo": "nvim-cokeline",
+            "rev": "8d5022789014a605d5a2ec02ed5133eb85874aff",
+            "sha256": "sha256-mG0cJelaZLNth5mc9QNBuhlWzo+1pfeOAz+REtgUY8o=",
+            "type": "github"
+        },
+        "version": "8d5022789014a605d5a2ec02ed5133eb85874aff"
+    },
+    "nwg-panel": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "nwg-panel",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nwg-piotr",
+            "repo": "nwg-panel",
+            "rev": "v0.7.2",
+            "sha256": "sha256-kQow8jBHxMTgtTaOvq8uT5YjWxml+GoYaoUH3hMQN8g=",
+            "type": "github"
+        },
+        "version": "v0.7.2"
+    },
+    "picom": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "picom",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yaocccc",
+            "repo": "picom",
+            "rev": "db16da3907b2ba540be5a53d0f0e28e2d3b5b705",
+            "sha256": "sha256-q0VI5/5jPQR+Rd7cxdLF+bMNeO+JoxTmBwAS0WqW7gQ=",
+            "type": "github"
+        },
+        "version": "db16da3907b2ba540be5a53d0f0e28e2d3b5b705"
+    },
+    "spicetify-cli": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "spicetify-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "khanhas",
+            "repo": "spicetify-cli",
+            "rev": "v2.11.1",
+            "sha256": "sha256-NX3qbnnbV2mLxBQCjfl7xNicyir6usi2uYGw6Yij/ho=",
+            "type": "github"
+        },
+        "version": "v2.11.1"
+    },
+    "spicetify-themes": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "spicetify-themes",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "morpheusthewhite",
+            "repo": "spicetify-themes",
+            "rev": "e466bf82db281ccd4ef9691fcc47a1f61de77d12",
+            "sha256": "sha256-72ag8DB8TpR9zdpj5vBlAyrhDHwu4Ti25BxqNCNoWEw=",
+            "type": "github"
+        },
+        "version": "e466bf82db281ccd4ef9691fcc47a1f61de77d12"
+    },
+    "zscroll": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "zscroll",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "noctuid",
+            "repo": "zscroll",
+            "rev": "788be9650b647f61f8f899054ad1213eee42e8a4",
+            "sha256": "sha256-gEluWzCbztO4N1wdFab+2xH7l9w5HqZVzp2LrdjHSRM=",
+            "type": "github"
+        },
+        "version": "788be9650b647f61f8f899054ad1213eee42e8a4"
+    }
+}
